@@ -1,0 +1,131 @@
+:root {
+  /* colors */
+  --clr-primary-500: hsl(217, 19%, 35%);
+  --clr-primary-400: hsl(214, 17%, 51%);
+  --clr-primary-300: hsl(212, 23%, 69%);
+  --clr-primary-200: hsl(210, 46%, 95%);
+  --clr-primary-100: hsl(0, 0%, 100%);
+
+  /* font family */
+  --ff-main: "Manrope", sans-serif;
+
+  /* font size */
+  --fs-main: 13px;
+
+  /* font weight */
+  --fw-ligh: 500;
+  --fw-bold: 700;
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-primary-200);
+  padding: 1rem;
+}
+.box {
+  max-width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+article {
+  background-color: var(--clr-primary-100);
+  font-family: var(--ff-main);
+}
+
+article h1 {
+  line-height: 1;
+  color: var(--clr-primary-500);
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+}
+
+article p {
+  color: var(--clr-primary-400);
+  padding: 0 1rem;
+}
+
+.bottom-container {
+  display: flex;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  height: 58px;
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.social-buttons {
+  display: none;
+  background-color: red;
+  position: absolute;
+  width: 100%;
+  height: 58px;
+}
+
+.social-buttons ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+}
+
+.social-buttons li {
+  list-style: none;
+  padding: 0 0.4rem;
+}
+
+#share-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: var(--clr-primary-200);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.visible {
+  display: flex;
+}
+
+@media (min-width: 900px) {
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    overflow: visible;
+  }
+
+  #share-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  article h1 {
+    padding-top: 1rem;
+  }
+
+  .social-buttons {
+    position: absolute;
+    width: fit-content;
+    top: -30px;
+    right: -90px;
+    z-index: 10;
+  }
+}
